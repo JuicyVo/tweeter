@@ -1,0 +1,61 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.tweetButton {
+  color:white;
+  background-color: rgb(105, 105, 255);
+  font-family: Bungee, sans-serif;
+  border-style: none;
+}
+
+.new-tweet {
+  border-color: black;
+  border-style: solid; 
+  /* remove border-style here later */
+  background-color: #f4f1ec;
+  border-radius: auto;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  width: auto;
+}
+
+#tweet-text {
+  display: flex;
+  border-bottom-style: solid;
+  border-top:none;
+  border-left: none;
+  border-right: none;
+  background-color: #f4f1ec;
+  margin-bottom:20px;
+  width: 100%;
+  padding:20px;
+  padding-bottom: 0px;
+} 
+/* fix justify-items center on it later */
+
+.lowerHalfHum {
+  display:flex;
+  justify-content: space-between;
+  padding:10px;
+  padding-top:0px;
+  
+}
+
+.counter {
+  display: flex;
+  font-family: Bungee, sans-serif;
+}
+
+#newTweetForm {
+  width:100%;
+}
+
+.red {
+  color:red;
+}
+

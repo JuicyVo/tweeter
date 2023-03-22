@@ -14,10 +14,27 @@ html {
  * Global layout stuff
  */
 
+
+ 
+
 body {
+  display: flex;
+  flex-direction: column;
+  width:100%;
   color: #545149;
+  font-family: 'Source+Sans+Pro', sans-serif; 
+  font-weight: 300;
   background-color: #f4f1ec;
   font-size: 24px;
+}
+
+.container {
+  /* background-color: aqua; */
+  /* change color to match body later */
+  width:90%;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
 }
 
 /*

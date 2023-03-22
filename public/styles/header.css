@@ -1,0 +1,23 @@
+header{
+  display: flex;
+  flex-direction: column;
+  align-items: center ;
+  height:520px;
+  background-color: #f0b857;
+  background-image: url("https://www.transparenttextures.com/patterns/connected.png");
+
+}
+
+
+.ProfilePic {
+  display: flex;
+  margin-top: 150px;
+  /* justify-content: flex-end; */
+  /* align-items:flex-end */
+}
+
+header div h2 {
+  margin:auto;
+  font-family: 'Source Sans Pro', sans-serif; 
+  font-weight: 700;
+}
