@@ -8,7 +8,6 @@ $(document).ready(function() {
       $("#counter").addClass("red");
     }
 
-
     $("#btn").on('click', function() {
       console.log(this); //the this word is a ref to button
     });
