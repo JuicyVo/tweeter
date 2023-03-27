@@ -71,3 +71,12 @@ ul{
 .hovered {
   color:rgb(233, 52, 230);
 }
+
+
+
+#ErrorMessage {
+  color:red;
+  border-radius: 2px;
+  border-style: solid;
+  display:none;
+}

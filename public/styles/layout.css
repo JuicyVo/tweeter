@@ -37,6 +37,10 @@ body {
   align-items: center;
 }
 
+#tweets-container {
+  display: flex;
+  flex-direction: column-reverse
+}
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
