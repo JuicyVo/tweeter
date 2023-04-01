@@ -11,7 +11,7 @@ header{
 
 .ProfilePic {
   display: flex;
-  margin-top: 150px;
+  margin-top: 17%;
   /* justify-content: flex-end; */
   /* align-items:flex-end */
 }
@@ -21,3 +21,4 @@ header div h2 {
   font-family: 'Source Sans Pro', sans-serif; 
   font-weight: 700;
 }
+

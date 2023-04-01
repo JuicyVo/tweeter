@@ -41,6 +41,61 @@ body {
   display: flex;
   flex-direction: column-reverse
 }
+
+
+/*for desktop mode*/
+@media only screen and (min-width:1024px) {
+  header {
+    width:40%;
+    margin-left:20px;
+    margin-top:140px;
+    padding-top:0px;
+    max-height: 400px;
+  }
+
+  body {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .container {
+    margin-top:12%;
+    margin-left:20px;
+    margin-right:20px
+  }
+}
+
+
+/*tablet mode*/
+@media only screen and (min-width:768px) and (max-width:1024px) {
+    header {
+      width:40%;
+      margin-left:20px;
+      margin-top:140px;
+      padding-top:0px;
+      max-height: 400px;
+    }
+  
+    body {
+      display: flex;
+      flex-direction: row;
+    }
+  
+    .container {
+      margin-top:12%;
+      margin-left:20px;
+      margin-right:20px
+  }
+
+}
+
+  /* Another smartphone breakpoint is maximum width of around 420px */
+  @media only screen and (max-width: 420px) {
+    /* simply for dev tool work */
+  }
+
+
+
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */

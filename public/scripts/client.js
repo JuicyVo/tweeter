@@ -32,8 +32,8 @@ $(document).ready(function() {
 //   }
 // ]
 
-const createTweetElement = function(tweet) {
-  let $tweet = $(`
+  const createTweetElement = function(tweet) {
+    let $tweet = $(`
     <article class="tweet">
       <header class="tweet-header">
         <div class="nameAndPic">
@@ -46,7 +46,7 @@ const createTweetElement = function(tweet) {
         <p>${tweet.content.text}</p>
       </div>
       <footer class="tweet-footer">
-        <div class="datePosted">${new Date(tweet.created_at)}</div>
+        <!-- <div class="datePosted">${new Date(tweet.created_at)}</div> -->
         <div class="timeago">${timeago.format(tweet.created_at)}</div>
         <ul class="tweetActions">
           <i class="fa-solid fa-flag"></i>
@@ -56,67 +56,67 @@ const createTweetElement = function(tweet) {
       </footer>
     </article>
   `);
-  return $tweet;
-}
+    return $tweet;
+  };
 
 
-const renderTweets = function(tweets) {
+  const renderTweets = function(tweets) {
   // Clear the tweets container before rendering new tweets
-  $('#tweets-container').empty();
+    $('#tweets-container').empty();
 
-  // Loop through each tweet and render it using the createTweetElement function
-  for (let tweet of tweets) {
-    //how it grabs the data 
-    let $tweet = createTweetElement(tweet);
-    $('#tweets-container').append($tweet);
-  }
-}
-
-const loadTweets=function() {
-  $.ajax({
-    url:'/tweets',
-    method: 'GET',
-    dataType: 'json',
-    success:function(response){
-      renderTweets(response)
+    // Loop through each tweet and render it using the createTweetElement function
+    for (let tweet of tweets) {
+    //how it grabs the data
+      let $tweet = createTweetElement(tweet);
+      $('#tweets-container').append($tweet);
     }
-  })
-  console.log ("loadTweets is working")
-}
-loadTweets()
+  };
 
-$("form").submit(function(event){
-   event.preventDefault()
-  let formData =$(this).serialize()
-  const errorMessage = document.getElementById("ErrorMessage")
-  if (formData.length >145) {
+  const loadTweets = function() {
+    $.ajax({
+      url:'/tweets',
+      method: 'GET',
+      dataType: 'json',
+      success:function(response) {
+        renderTweets(response);
+      }
+    });
+    console.log("loadTweets is working");
+  };
+  loadTweets();
+
+  $("form").submit(function(event) {
+    event.preventDefault();
+    let formData = $(this).serialize();
+    const errorMessage = document.getElementById("ErrorMessage");
+    if (formData.length > 145) {
     // errorMessage.style.display="flex"
-    $("#ErrorMessage").slideDown()
-    return
-  }
-  console.log (formData)
-  if (formData === "") {
-    alert("Form data is empty");
-    return; //this part seems invalid
-  
-  }
-  $.ajax({
-    method: "POST",
-    data: formData, 
-    url: "/tweets",
-    success:function(response){
-      loadTweets()
-    },
-    error: function(textStatus, errorThrown) {
-      console.log("Error:", textStatus, errorThrown);
-      alert("An error occurred with the form data.");
+      $("#ErrorMessage").slideDown();
+      return;
     }
+    console.log(formData);
+    if (formData === "") {
+      alert("Form data is empty");
+      return; //this part seems invalid
   
-  })
-  errorMessage.style.display="none"
-})
+    }
+    $.ajax({
+      method: "POST",
+      data: formData,
+      url: "/tweets",
+      success:function(response) {
+        loadTweets();
+      },
+      error: function(textStatus, errorThrown) {
+        console.log("Error:", textStatus, errorThrown);
+        alert("An error occurred with the form data.");
+      }
+  
+    });
+    errorMessage.style.display = "none";
+  });
 
 
-})
+});
 
 
