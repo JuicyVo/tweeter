@@ -21,5 +21,5 @@ Tweeter is a simple, single-page Twitter clone, made up from HTML, CSS, and JS.
 
 ## Screenshots
 
-!["Desktop/Tablet] (https://github.com/JuicyVo/tweeter/blob/master/docs/Screen%20Shot%202023-04-01%20at%203.41.50%20AM.png?raw=true)
-!["MobileView] (https://github.com/JuicyVo/tweeter/blob/master/docs/Screen%20Shot%202023-04-01%20at%203.43.26%20AM.png)
+!["Desktop/Tablet"] (https://github.com/JuicyVo/tweeter/blob/master/docs/Screen%20Shot%202023-04-01%20at%203.41.50%20AM.png?raw=true)
+!["MobileView"] (https://github.com/JuicyVo/tweeter/blob/master/docs/Screen%20Shot%202023-04-01%20at%203.43.26%20AM.png)
