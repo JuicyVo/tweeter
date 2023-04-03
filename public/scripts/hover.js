@@ -1,8 +1,9 @@
 $(document).ready(function() {
   console.log("hi its hover");
-  $(".tweetActions i").hover(function() {
+  $(document).on("mouseenter", ".tweetActions i", function() {
     $(this).addClass("hovered");
-  }, function() {
+  });
+  $(document).on("mouseleave", ".tweetActions i", function() {
     $(this).removeClass("hovered");
   });
 });
