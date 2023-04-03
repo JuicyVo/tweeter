@@ -1,5 +1,4 @@
 $(document).ready(function() {
-  console.log("hi");
   $("textarea").on("input", function() {
     let remainChars = 140 - $(this).val().length;
     $(`#counter`).text(remainChars);
@@ -10,11 +9,18 @@ $(document).ready(function() {
     if (remainChars >0) {
       $("#counter").removeClass("red");
     }
+    
+    })
 
-    $("#btn").on('click', function() {
-      console.log(this); //the this word is a ref to button
-    });
-  
-  });
+    $("#newTweetForm").submit(function(event) {
+      let remainChars = 140 - $("textarea").val().length;
+      $("textarea").val("");
+    $("#counter").text("140").removeClass("red");
+    })
+
+
+
 
 });
+
+
