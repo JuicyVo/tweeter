@@ -6,6 +6,9 @@ $(document).ready(function() {
 
     if (remainChars < 0) {
       $("#counter").addClass("red");
+    } 
+    if (remainChars >0) {
+      $("#counter").removeClass("red");
     }
 
     $("#btn").on('click', function() {
