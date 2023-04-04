@@ -7,30 +7,6 @@
 //delete this tweetdata later
 
 $(document).ready(function() {
-// const data = [
-//   {
-//     "user": {
-//       "name": "Newton",
-//       "avatars": "https://i.imgur.com/73hZDYK.png"
-//       ,
-//       "handle": "@SirIsaac"
-//     },
-//     "content": {
-//       "text": "If I have seen further it is by standing on the shoulders of giants"
-//     },
-//     "created_at": 1461116232227
-//   },
-//   {
-//     "user": {
-//       "name": "Descartes",
-//       "avatars": "https://i.imgur.com/nlhLi3I.png",
-//       "handle": "@rd" },
-//     "content": {
-//       "text": "Je pense , donc je suis"
-//     },
-//     "created_at": 1461113959088
-//   }
-// ]
 
   const createTweetElement = function(tweet) {
     let $tweet = $(`
@@ -43,7 +19,7 @@ $(document).ready(function() {
         <h2 class="personIgn">${tweet.user.handle}</h2> 
       </header>
       <div class="tweet-content">
-        <p>${tweet.content.text}</p>
+        <p>${escape(tweet.content.text)}</p>
       </div>
       <footer class="tweet-footer">
         <!-- <div class="datePosted">${new Date(tweet.created_at)}</div> -->
@@ -96,8 +72,8 @@ $(document).ready(function() {
     }
     console.log(formData);
     if (formData === "") {
-      alert("Form data is empty");
-      return; //this part seems invalid
+      $("#ErrorMessage").slideDown();
+      return; //this part seems invalid, fix later
   
     }
     $.ajax({
@@ -108,8 +84,8 @@ $(document).ready(function() {
         loadTweets();
       },
       error: function(textStatus, errorThrown) {
-        console.log("Error:", textStatus, errorThrown);
-        alert("An error occurred with the form data.");
+        $("#ErrorMessageNoText").slideDown();
+
       }
   
     });

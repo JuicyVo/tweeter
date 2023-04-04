@@ -81,3 +81,14 @@ ul{
   border-style: solid;
   display:none;
 }
+
+#ErrorMessageNoText {
+  color:red;
+  border-radius: 2px;
+  border-style: solid;
+  display:none;
+}
+
+.tweetHovered{
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
