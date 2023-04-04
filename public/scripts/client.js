@@ -1,11 +1,3 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
-
-//delete this tweetdata later
-
 $(document).ready(function() {
 
   const createTweetElement = function(tweet) {
@@ -66,14 +58,13 @@ $(document).ready(function() {
     let formData = $(this).serialize();
     const errorMessage = document.getElementById("ErrorMessage");
     if (formData.length > 145) {
-    // errorMessage.style.display="flex"
       $("#ErrorMessage").slideDown();
       return;
     }
     console.log(formData);
     if (formData === "") {
       $("#ErrorMessage").slideDown();
-      return; //this part seems invalid, fix later
+      return; 
   
     }
     $.ajax({
